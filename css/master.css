@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: "Raleway", sans-serif;
+}
+
+:root{
+    --mainPadding:30px;
+    --mainBorderRadius:10px;
+}
+
+
+.container{
+    background-image: url(../images/bg-mobile.png);
+    padding: 150px var(--mainPadding);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container>div{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: var(--mainBorderRadius);
+    padding: var(--mainPadding);
+    display: flex;
+    flex-flow: column;
+}
+
+
+@media (min-width:992px){
+    body{
+        background-color: hsl(229, 57%, 11%);
+    }
+    .container {
+        width: 100%;
+        background-image: url(../images/bg-desktop.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .container>div{
+        background-color: hsl(228, 56%, 26%);
+        border-radius: var(--mainBorderRadius);
+        padding: var(--mainPadding);
+        display: flex;
+        position: relative;
+        top: -225px;
+        left: -25px;
+    }
+}
+
+
+/* start card1 */
+.container .card1 {
+    border-top-right-radius:100px;
+    margin-bottom: 15px;
+}
+
+.container .card1 .logo{
+    margin-bottom: 30px;
+}
+
+.container .card1 .icons{
+    display: flex;
+}
+
+.container .card1 .icons>div{
+    display: flex;
+    width: 50px;
+    height: 50px;  
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: var(--mainBorderRadius);
+    margin-right: 15px;
+}
+
+@media (min-width:992px){
+    .container .card1 {
+        width: 25%;
+        margin: 0px 20px 0px 0px;
+    }
+}
+
+/* end card1 */
+
+/* start card2 */
+
+.container .card2 {
+    position: relative;
+}
+
+.container .card2>p:first-of-type{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: hsl(229, 7%, 55%);
+    font-weight: 400;
+}
+
+.container .card2>p:first-of-type span{
+    color: hsl(243, 100%, 93%);
+    font-weight: 700;
+}
+
+form{
+    background-color:hsl(229, 57%, 11%);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: var(--mainBorderRadius);
+}
+
+
+.container .card2 .range [type="range"]{
+    width: 81.5%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border-radius: var(--mainBorderRadius);
+    background-image: linear-gradient(to right , hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.container .card2 .range [type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(243, 100%, 93%);
+} 
+
+.container .card2 .rangeData{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(243, 100%, 93%);
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.container .card2>p:nth-of-type(2){
+    background-color: white;
+    padding:10px 20px;
+    width: 55%;
+    border-radius: var(--mainBorderRadius);
+    color: hsl(229, 7%, 55%);
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    font-size: 14px;
+}
+
+.container .card2>p:nth-of-type(2) span{
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    font-weight: 700;
+}
+
+
+@media (min-width:992px){
+    .container .card2 {
+        width: 35%;
+    }
+    .container .card2>p:first-of-type {
+        text-align: start;
+    }
+
+    .container .card2>p:nth-of-type(2){
+        width: fit-content;
+        top: -15px;
+        left: 100%;
+        -webkit-transform: translate(calc(-100% - 30px),-50%);
+        border-bottom-right-radius: 0px;
+    }
+
+    .container .card2>p:nth-of-type(2)::after{
+        content: "";
+
+        border-width: 10px ;
+        border-color: white white transparent transparent;
+        border-style:solid ;
+        position: absolute;
+        top: 99%;
+        left: 100%;
+        transform: translateX(-100%);
+
+    }
+    
+    .container .card2>p:nth-of-type(2) span{
+        padding-right: 10px;
+    }
+}
+/* end card2 */
+
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    top: 100%;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
